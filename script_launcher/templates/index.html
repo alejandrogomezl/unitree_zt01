@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Script Launcher</title>
+</head>
+<body>
+    <h1>Scripts disponibles</h1>
+    <ul>
+        {% for script in scripts %}
+        <li>
+            {{ script }} —
+            {% if status[script].running %}
+                <strong>En ejecución (PID {{ status[script].pid }})</strong> |
+                <a href="{{ url_for('stop_script_route', script=script) }}">Detener</a>
+            {% else %}
+                <a href="{{ url_for('run_script', script=script) }}">Ejecutar</a>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
