@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for
 import os
 
-from script_manager import start_script, stop_script, is_running, get_pid
+from script_manager import start_script, stop_script, is_running, get_pid, get_log
 
 SCRIPT_DIR = os.path.join(os.path.dirname(__file__), 'scripts')
 app = Flask(__name__)
@@ -10,7 +10,8 @@ app = Flask(__name__)
 def index():
     scripts = [f for f in os.listdir(SCRIPT_DIR) if f.endswith(('.sh', '.py'))]
     status = {s: {'running': is_running(s), 'pid': get_pid(s)} for s in scripts}
-    return render_template('index.html', scripts=scripts, status=status)
+    logs = {s: get_log(s) for s in scripts}
+    return render_template('index.html', scripts=scripts, status=status, logs=logs)
 
 @app.route('/run/<script>')
 def run_script(script):

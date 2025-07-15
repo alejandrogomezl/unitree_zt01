@@ -1,0 +1,840 @@
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+INFO:root:Creating offer...
+INFO:root:Trying to send SDP using the old method...
+ERROR:root:An error occurred: HTTPConnectionPool(host='192.168.4.15', port=8081): Max retries exceeded with url: /offer (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fff570607d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+ERROR:root:An error occurred with the old method: Failed to receive SDP Answer: No response
+INFO:root:Falling back to the new method...
+INFO:root:SDP successfully sent using the new method.
+INFO:aioice.ice:Connection(1) Discovered peer reflexive candidate Candidate(I9aukWhdYl 1 udp 2130706431 192.168.4.15 50383 typ prflx)
+INFO:aioice.ice:Connection(1) Check CandidatePair(('192.168.1.162', 42280) -> ('192.168.4.15', 50383)) State.WAITING -> State.IN_PROGRESS
+INFO:aioice.ice:Connection(1) Check CandidatePair(('192.168.4.1', 46505) -> ('192.168.4.15', 50383)) State.WAITING -> State.IN_PROGRESS
+INFO:root:Track recieved: audio
+INFO:root:Track recieved: video
+INFO:aioice.ice:Connection(1) Check CandidatePair(('192.168.1.162', 42280) -> ('192.168.4.15', 50383)) State.FROZEN -> State.IN_PROGRESS
+INFO:aioice.ice:Connection(1) Check CandidatePair(('192.168.4.1', 46505) -> ('192.168.4.15', 50383)) State.FROZEN -> State.IN_PROGRESS
+INFO:aioice.ice:Connection(1) Check CandidatePair(('192.168.1.162', 42280) -> ('192.168.4.15', 50383)) State.IN_PROGRESS -> State.SUCCEEDED
+INFO:aioice.ice:Connection(1) ICE completed
+INFO:aioice.ice:Connection(1) Check CandidatePair(('192.168.4.1', 46505) -> ('192.168.4.15', 50383)) State.IN_PROGRESS -> State.SUCCEEDED
+INFO:root:Received message on data channel: {"type":"validation","data":"GnoSu7qBzcVHfz4pszN"}
+INFO:root:Data channel opened
+INFO:root:> message sent: {"type": "validation", "topic": "", "data": "2TXXU9D1tXL3lOxlopcdnQ=="}
+INFO:root:Received message on data channel: {"type":"validation", "data":"Validation Ok."}
+INFO:root:Validation succeed
+INFO:root:Received message on data channel: {"type":"errors","data":[]}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/motion_switcher/request", "data": {"header": {"identity": {"id": 677650043, "api_id": 1001}}, "parameter": ""}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/motion_switcher/response","data":{"header":{"identity":{"api_id":1001,"id":677650043},"status":{"code":0}},"data":"{\"form\":\"0\",\"name\":\"mcf\"}"}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/motion_switcher/request", "data": {"header": {"identity": {"id": 677650765, "api_id": 1002}}, "parameter": "{\"name\": \"normal\"}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/motion_switcher/response","data":{"header":{"identity":{"api_id":1002,"id":677650765},"status":{"code":7004}},"data":""}}
+INFO:root:> message sent: {"type": "rtc_inner_req", "topic": "", "data": {"req_type": "public_network_status", "uuid": "837fb35f-2373-4bf6-aaca-8b84e50ae248"}}
+INFO:root:Received message on data channel: {"type":"rtc_inner_req","info":{"req_type":"public_network_status","status":"NetworkStatus.ON_WIFI_CONNECTED","uuid":"837fb35f-2373-4bf6-aaca-8b84e50ae248"}}
+INFO:root:Network status message received.
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:25", "timeInNum": 1750876825}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:Received message on data channel: {"type":"rtc_inner_req","info":{"req_type":"rtt_probe_send_from_mechine","send_time_stamp":1750876825,"uuid":"f4f53686-51e7-416f-9638-6e1211cb51b1"}}
+INFO:root:> message sent: {"type": "rtc_inner_req", "topic": "", "data": {"req_type": "rtt_probe_send_from_mechine", "send_time_stamp": 1750876825, "uuid": "f4f53686-51e7-416f-9638-6e1211cb51b1"}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:27", "timeInNum": 1750876827}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677654545, "api_id": 1016}}, "parameter": ""}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1016,"id":677654545},"status":{"code":-1}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677655127, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677655127},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677655164, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677655164},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677654821, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677654821},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677655258, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677655258},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677655227, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677655227},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677655545, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677655545},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677655778, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677655778},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677656392, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677656392},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677655756, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677655756},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677656446, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677656446},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:29", "timeInNum": 1750876829}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677656949, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677656949},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677656780, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677656780},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677657056, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677657056},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677657076, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677657076},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677657214, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677657214},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677657939, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677657939},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677658171, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677658171},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677658106, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677658106},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677657953, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677657953},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677658177, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677658177},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:31", "timeInNum": 1750876831}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677658846, "api_id": 1008}}, "parameter": "{\"x\": 0.04, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677658846},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677658738, "api_id": 1008}}, "parameter": "{\"x\": 0.04, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677658738},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677659343, "api_id": 1008}}, "parameter": "{\"x\": 0.96, \"y\": 0.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677659343},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677659336, "api_id": 1008}}, "parameter": "{\"x\": 0.96, \"y\": 0.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677659336},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677659633, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677659633},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677659409, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677659409},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677659859, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677659859},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677660056, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677660056},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677659806, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677659806},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677660259, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677660259},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677660157, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:33", "timeInNum": 1750876833}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677660157},"status":{"code":0}},"data":""}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677660630, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677660630},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677661342, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677661342},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677661081, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677661081},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677661689, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677661689},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677661474, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677661474},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677661893, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677661893},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677661846, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677661846},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677661430, "api_id": 1016}}, "parameter": ""}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1016,"id":677661430},"status":{"code":-1}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677662221, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677662221},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677661883, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677661883},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677662052, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677662052},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:35", "timeInNum": 1750876835}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677662330, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677662330},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677663214, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677663214},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677662938, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677662938},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677663384, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677663384},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677663541, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677663541},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677663927, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677663927},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677664012, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": -0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677664012},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677664314, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": -0.09, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677664314},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677664327, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": -0.09, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677664327},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677663897, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.09, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677663897},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677664620, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.09, \"z\": 0.05}"}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:37", "timeInNum": 1750876837}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677664620},"status":{"code":0}},"data":""}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677665110, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.09, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677665110},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677664699, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.09, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677664699},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677664802, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677664802},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677665013, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677665013},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677665341, "api_id": 1004}}, "parameter": ""}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1004,"id":677665341},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677666170, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677666170},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677666110, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677666110},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:39", "timeInNum": 1750876839}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677666289, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677666289},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677666459, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677666459},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677666894, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677666894},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677666753, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677666753},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677667421, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677667421},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677667369, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677667369},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677667807, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677667807},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677667942, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677667942},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677668135, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677668135},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677668725, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677668725},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:41", "timeInNum": 1750876841}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677668267, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677668267},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677669148, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677669148},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677668939, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677668939},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677668841, "api_id": 1008}}, "parameter": "{\"x\": 0.05, \"y\": -0.07, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677668841},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677669023, "api_id": 1008}}, "parameter": "{\"x\": 0.06, \"y\": -0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677669023},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677669804, "api_id": 1008}}, "parameter": "{\"x\": 0.06, \"y\": -0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677669804},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677669323, "api_id": 1008}}, "parameter": "{\"x\": 0.97, \"y\": -0.26, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677669323},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677670225, "api_id": 1008}}, "parameter": "{\"x\": 0.97, \"y\": -0.26, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677670225},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677669872, "api_id": 1008}}, "parameter": "{\"x\": 0.04, \"y\": 0.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677669872},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677670170, "api_id": 1008}}, "parameter": "{\"x\": 0.04, \"y\": 0.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677670170},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677670800, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677670800},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677670523, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677670523},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:43", "timeInNum": 1750876843}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677670704, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677670704},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677670743, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677670743},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677671139, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677671139},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677671333, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677671333},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677671341, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677671341},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677671755, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677671755},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677671161, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677671161},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677671634, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677671634},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677672100, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677672100},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677672516, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677672516},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677671867, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677671867},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677672332, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677672332},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:45", "timeInNum": 1750876845}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677672358, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677672358},"status":{"code":0}},"data":""}}
+INFO:root:Received message on data channel: {"type":"rtc_inner_req","info":{"req_type":"rtt_probe_send_from_mechine","send_time_stamp":1750876845,"uuid":"87c597aa-2c3b-49d7-b6c9-b0e20cc147d1"}}
+INFO:root:> message sent: {"type": "rtc_inner_req", "topic": "", "data": {"req_type": "rtt_probe_send_from_mechine", "send_time_stamp": 1750876845, "uuid": "87c597aa-2c3b-49d7-b6c9-b0e20cc147d1"}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677672220, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677672220},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677673024, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677673024},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677673137, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677673137},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677672897, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677672897},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677673084, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677673084},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677673088, "api_id": 1008}}, "parameter": "{\"x\": 0.71, \"y\": -0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677673088},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677673821, "api_id": 1008}}, "parameter": "{\"x\": 0.71, \"y\": -0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677673821},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677674044, "api_id": 1008}}, "parameter": "{\"x\": 1.0, \"y\": -0.08, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677674044},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677673892, "api_id": 1008}}, "parameter": "{\"x\": 1.0, \"y\": -0.08, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677673892},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677673734, "api_id": 1008}}, "parameter": "{\"x\": 1.0, \"y\": 0.4, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677673734},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677674214, "api_id": 1008}}, "parameter": "{\"x\": 1.0, \"y\": 0.4, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677674214},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677674901, "api_id": 1008}}, "parameter": "{\"x\": 0.17, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:47", "timeInNum": 1750876847}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677674901},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677674560, "api_id": 1008}}, "parameter": "{\"x\": 0.17, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677674560},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677674615, "api_id": 1008}}, "parameter": "{\"x\": 0.17, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677674615},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677674517, "api_id": 1008}}, "parameter": "{\"x\": 0.17, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677674517},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677674687, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": 0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677674687},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677675369, "api_id": 1008}}, "parameter": "{\"x\": -0.02, \"y\": 0.01, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677675369},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677675846, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677675846},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677675392, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677675392},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677675453, "api_id": 1008}}, "parameter": "{\"x\": -0.01, \"y\": 0.02, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677675453},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677675794, "api_id": 1008}}, "parameter": "{\"x\": -0.01, \"y\": 0.02, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677675794},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677675638, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677675638},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677676387, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677676387},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677676490, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677676490},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:49", "timeInNum": 1750876849}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677676146, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677676146},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677676544, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677676544},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677677344, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677677344},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677677206, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677677206},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677676838, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677676838},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677677039, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677677039},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677677293, "api_id": 1008}}, "parameter": "{\"x\": 0.01, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677677293},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677677462, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677677462},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677677732, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677677732},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677678283, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677678283},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677677735, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677677735},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677678052, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677678052},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677678512, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677678512},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:51", "timeInNum": 1750876851}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677679174, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677679174},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677679286, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677679286},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677678812, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677678812},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677679155, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677679155},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677679809, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677679809},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677679362, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677679362},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677679664, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677679664},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677679755, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677679755},"status":{"code":0}},"data":""}}
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.2)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+🎮 Mando detectado: Xbox Series X Controller
+🕒 WebRTC connection        : 🟡 started       (20:40:21)
+Decoder set to: LibVoxelDecoder
+🕒 Signaling State          : 🟡 have-local-offer (20:40:21)
+🕒 ICE Gathering State      : 🟡 gathering     (20:40:21)
+🕒 ICE Gathering State      : 🟢 complete      (20:40:21)
+🕒 ICE Connection State     : 🔵 checking      (20:40:22)
+🕒 Peer Connection State    : 🔵 connecting    (20:40:22)
+🕒 Signaling State          : 🟢 stable        (20:40:22)
+🕒 ICE Connection State     : 🟢 completed     (20:40:22)
+🕒 Peer Connection State    : 🟢 connected     (20:40:22)
+🕒 Data Channel Verification: ✅ OK            (20:40:23)
+✅ Conectado al robot
+🔄 Cambiando a modo 'normal'...
+Go2 connection mode: STA-L
+👋 Enviando saludo
+🕹️ Controla el robot con el joystick (Ctrl+C para salir)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.03, y=0.05, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.04, y=1.0, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.04, y=1.0, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.96, y=0.0, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.96, y=0.0, z=0.02 (envío 2/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 2/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 2/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 2/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 2/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 2/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 2/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 2/2)
+👋 Botón A pulsado: saludo
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 2/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 2/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 2/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 2/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.02, y=-0.01, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=-0.09, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=-0.09, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.05, y=-0.09, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.05, y=-0.09, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.05, y=-0.09, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.05, y=-0.09, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 2/2)
+🦵 Botón Y pulsado: levantarse
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.05, y=-0.07, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.06, y=-0.05, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.06, y=-0.05, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.97, y=-0.26, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.97, y=-0.26, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.04, y=0.0, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.04, y=0.0, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.05, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.05, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.06, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.71, y=-0.06, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.71, y=-0.06, z=0.02 (envío 2/2)
+🕹 Moviendo: x=1.0, y=-0.08, z=0.02 (envío 1/2)
+🕹 Moviendo: x=1.0, y=-0.08, z=0.02 (envío 2/2)
+🕹 Moviendo: x=1.0, y=0.4, z=0.02 (envío 1/2)
+🕹 Moviendo: x=1.0, y=0.4, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.17, y=1.0, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.17, y=1.0, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.17, y=1.0, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.17, y=1.0, z=0.02 (envío 2/2)
+🕹 Moviendo: x=-0.02, y=0.01, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.02, y=0.01, z=0.02 (envío 2/2)
+🕹 Moviendo: x=-0.03, y=-0.0, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.03, y=-0.0, z=0.02 (envío 2/2)
+🕹 Moviendo: x=-0.01, y=0.02, z=0.02 (envío 1/2)
+🕹 Moviendo: x=-0.01, y=0.02, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.03, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.03, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.03, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.03, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.03, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.03, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.03, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.03, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.01, y=0.03, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.01, y=0.03, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.02, y=0.03, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.02, y=0.03, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.02, y=0.03, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.02, y=0.03, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.02, y=0.03, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.02, y=0.03, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.02, y=0.03, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.02, y=0.03, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.02, y=0.03, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.02, y=0.03, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.02, y=0.03, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.02, y=0.03, z=0.02 (envío 2/2)
+🕹 Moviendo: x=0.02, y=0.03, z=0.02 (envío 1/2)
+🕹 Moviendo: x=0.02, y=0.03, z=0.02 (envío 2/2)
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677680028, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677680028},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677680481, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677680481},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677679940, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677679940},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677680519, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677680519},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:53", "timeInNum": 1750876853}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677680784, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677680784},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677681013, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677681013},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677680969, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677680969},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677680690, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677680690},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677680980, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677680980},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677681108, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677681108},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677681534, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677681534},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677682070, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677682070},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677681992, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677681992},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677681860, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677681860},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677682446, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677682446},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677681993, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677681993},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:55", "timeInNum": 1750876855}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677683039, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677683039},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677682649, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677682649},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677683367, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677683367},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677683421, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677683421},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677683675, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677683675},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677683757, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677683757},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677683734, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677683734},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677683236, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677683236},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677683845, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677683845},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677684230, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677684230},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677684416, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677684416},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677684102, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677684102},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677684921, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677684921},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:57", "timeInNum": 1750876857}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677685104, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677685104},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677684368, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677684368},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677684907, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677684907},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677684828, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677684828},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677685086, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677685086},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677685541, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677685541},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677686015, "api_id": 1008}}, "parameter": "{\"x\": 0.02, \"y\": 0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677686015},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677685753, "api_id": 1008}}, "parameter": "{\"x\": 0.04, \"y\": 0.74, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677685753},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677685758, "api_id": 1008}}, "parameter": "{\"x\": 0.04, \"y\": 0.74, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677685758},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677686120, "api_id": 1008}}, "parameter": "{\"x\": 0.09, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677686120},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677686324, "api_id": 1008}}, "parameter": "{\"x\": 0.09, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677686324},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677686092, "api_id": 1008}}, "parameter": "{\"x\": 0.29, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677686092},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:40:59", "timeInNum": 1750876859}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677686393, "api_id": 1008}}, "parameter": "{\"x\": 0.29, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677686393},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677686667, "api_id": 1008}}, "parameter": "{\"x\": 0.32, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677686667},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677687059, "api_id": 1008}}, "parameter": "{\"x\": 0.32, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677687059},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677687454, "api_id": 1008}}, "parameter": "{\"x\": 0.34, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677687454},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677686918, "api_id": 1008}}, "parameter": "{\"x\": 0.34, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677686918},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677687637, "api_id": 1008}}, "parameter": "{\"x\": 0.45, \"y\": 0.96, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677687637},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677687974, "api_id": 1008}}, "parameter": "{\"x\": 0.45, \"y\": 0.96, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677687974},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677687377, "api_id": 1008}}, "parameter": "{\"x\": 0.45, \"y\": 0.96, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677687377},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677687884, "api_id": 1008}}, "parameter": "{\"x\": 0.45, \"y\": 0.96, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677687884},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677688584, "api_id": 1008}}, "parameter": "{\"x\": 0.48, \"y\": 0.94, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677688584},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677688364, "api_id": 1008}}, "parameter": "{\"x\": 0.48, \"y\": 0.94, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677688364},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677688304, "api_id": 1008}}, "parameter": "{\"x\": 0.48, \"y\": 0.94, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677688304},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:01", "timeInNum": 1750876861}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677688479, "api_id": 1008}}, "parameter": "{\"x\": 0.48, \"y\": 0.94, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677688479},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677688858, "api_id": 1008}}, "parameter": "{\"x\": 0.49, \"y\": 0.94, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677688858},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677689040, "api_id": 1008}}, "parameter": "{\"x\": 0.49, \"y\": 0.94, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677689040},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677689243, "api_id": 1008}}, "parameter": "{\"x\": 0.79, \"y\": 0.68, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677689243},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677688903, "api_id": 1008}}, "parameter": "{\"x\": 0.79, \"y\": 0.68, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677688903},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677689317, "api_id": 1008}}, "parameter": "{\"x\": 0.71, \"y\": 0.78, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677689317},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677689541, "api_id": 1008}}, "parameter": "{\"x\": 0.71, \"y\": 0.78, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677689541},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677689391, "api_id": 1008}}, "parameter": "{\"x\": 0.69, \"y\": 0.79, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677689391},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677690304, "api_id": 1008}}, "parameter": "{\"x\": 0.69, \"y\": 0.79, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677690304},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677690264, "api_id": 1008}}, "parameter": "{\"x\": 0.36, \"y\": 0.97, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677690264},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677689879, "api_id": 1008}}, "parameter": "{\"x\": 0.36, \"y\": 0.97, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677689879},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677690122, "api_id": 1008}}, "parameter": "{\"x\": -0.6, \"y\": -0.77, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677690122},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677690257, "api_id": 1008}}, "parameter": "{\"x\": -0.6, \"y\": -0.77, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677690257},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:03", "timeInNum": 1750876863}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677690883, "api_id": 1008}}, "parameter": "{\"x\": -1.0, \"y\": -0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677690883},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677691248, "api_id": 1008}}, "parameter": "{\"x\": -1.0, \"y\": -0.05, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677691248},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677690798, "api_id": 1008}}, "parameter": "{\"x\": 0.06, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677690798},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677691616, "api_id": 1008}}, "parameter": "{\"x\": 0.06, \"y\": 1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677691616},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677691227, "api_id": 1008}}, "parameter": "{\"x\": 0.31, \"y\": -1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677691227},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677691716, "api_id": 1008}}, "parameter": "{\"x\": 0.31, \"y\": -1.0, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677691716},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677691264, "api_id": 1008}}, "parameter": "{\"x\": -0.01, \"y\": -0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677691264},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677692101, "api_id": 1008}}, "parameter": "{\"x\": -0.01, \"y\": -0.06, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677692101},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677691503, "api_id": 1008}}, "parameter": "{\"x\": -0.0, \"y\": -0.02, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677691503},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677691639, "api_id": 1008}}, "parameter": "{\"x\": -0.0, \"y\": -0.02, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677691639},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677692606, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677692606},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677691952, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": 0.05}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677691952},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:05", "timeInNum": 1750876865}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:Received message on data channel: {"type":"rtc_inner_req","info":{"req_type":"rtt_probe_send_from_mechine","send_time_stamp":1750876865,"uuid":"17eafccf-c32d-4e3e-8f54-9b892f5151af"}}
+INFO:root:> message sent: {"type": "rtc_inner_req", "topic": "", "data": {"req_type": "rtt_probe_send_from_mechine", "send_time_stamp": 1750876865, "uuid": "17eafccf-c32d-4e3e-8f54-9b892f5151af"}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677692222, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.475}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677692222},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677692760, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.475}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677692760},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677693128, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": 0.25}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677693128},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677692578, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": 0.25}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677692578},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677692895, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.2}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677692895},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677693752, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.2}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677693752},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677693553, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677693553},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677693233, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677693233},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677694380, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677694380},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677694292, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677694292},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677694371, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677694371},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677694412, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677694412},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:07", "timeInNum": 1750876867}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677695031, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677695031},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677694291, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677694291},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677694465, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677694465},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677695089, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677695089},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677695638, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677695638},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677694969, "api_id": 1008}}, "parameter": "{\"x\": -0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677694969},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677696001, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677696001},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677695335, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677695335},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677695778, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677695778},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677695649, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677695649},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677695786, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677695786},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677696175, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677696175},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677696331, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677696331},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:09", "timeInNum": 1750876869}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677696201, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677696201},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677696781, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677696781},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677697114, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677697114},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677696945, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677696945},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677697530, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677697530},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677697246, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677697246},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677697373, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677697373},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677698256, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677698256},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677697992, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677697992},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677697684, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677697684},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677698383, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677698383},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677698282, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677698282},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:11", "timeInNum": 1750876871}}
+INFO:root:Received message on data channel: {"type":"heartbeat"}
+INFO:root:Heartbeat response received.
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677698829, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677698829},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677699153, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:Received message on data channel: {"type":"res","topic":"rt/api/sport/response","data":{"header":{"identity":{"api_id":1008,"id":677699153},"status":{"code":0}},"data":""}}
+INFO:root:> message sent: {"type": "req", "topic": "rt/api/sport/request", "data": {"header": {"identity": {"id": 677699148, "api_id": 1008}}, "parameter": "{\"x\": 0.03, \"y\": -0.03, \"z\": -0.0}"}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:13", "timeInNum": 1750876873}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:15", "timeInNum": 1750876875}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:17", "timeInNum": 1750876877}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:19", "timeInNum": 1750876879}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:21", "timeInNum": 1750876881}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:23", "timeInNum": 1750876883}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:25", "timeInNum": 1750876885}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:27", "timeInNum": 1750876887}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:29", "timeInNum": 1750876889}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:31", "timeInNum": 1750876891}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:33", "timeInNum": 1750876893}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:35", "timeInNum": 1750876895}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:37", "timeInNum": 1750876897}}
+INFO:root:> message sent: {"type": "heartbeat", "topic": "", "data": {"timeInStr": "2025-06-25 20:41:39", "timeInNum": 1750876899}}
+INFO:aioice.ice:Connection(1) Consent to send expired
+ERROR:asyncio:Exception in callback AsyncIOEventEmitter._emit_run.<locals>.callback(<Task finishe...StreamError()>) at /home/zt01/unitree_zt01/venv/lib/python3.11/site-packages/pyee/asyncio.py:97
+handle: <Handle AsyncIOEventEmitter._emit_run.<locals>.callback(<Task finishe...StreamError()>) at /home/zt01/unitree_zt01/venv/lib/python3.11/site-packages/pyee/asyncio.py:97>
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/zt01/unitree_zt01/venv/lib/python3.11/site-packages/pyee/asyncio.py", line 105, in callback
+    self.emit("error", exc)
+  File "/home/zt01/unitree_zt01/venv/lib/python3.11/site-packages/pyee/asyncio.py", line 70, in emit
+    return super().emit(event, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zt01/unitree_zt01/venv/lib/python3.11/site-packages/pyee/base.py", line 223, in emit
+    self._emit_handle_potential_error(event, args[0] if args else None)
+  File "/home/zt01/unitree_zt01/venv/lib/python3.11/site-packages/pyee/base.py", line 181, in _emit_handle_potential_error
+    raise error
+  File "/home/zt01/unitree_zt01/go2_webrtc_connect/go2_webrtc_driver/webrtc_driver.py", line 166, in on_track
+    frame = await track.recv()
+            ^^^^^^^^^^^^^^^^^^
+  File "/home/zt01/unitree_zt01/venv/lib/python3.11/site-packages/aiortc/rtcrtpreceiver.py", line 206, in recv
+    raise MediaStreamError
+aiortc.mediastreams.MediaStreamError
+ERROR:asyncio:Exception in callback AsyncIOEventEmitter._emit_run.<locals>.callback(<Task finishe...StreamError()>) at /home/zt01/unitree_zt01/venv/lib/python3.11/site-packages/pyee/asyncio.py:97
+handle: <Handle AsyncIOEventEmitter._emit_run.<locals>.callback(<Task finishe...StreamError()>) at /home/zt01/unitree_zt01/venv/lib/python3.11/site-packages/pyee/asyncio.py:97>
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/zt01/unitree_zt01/venv/lib/python3.11/site-packages/pyee/asyncio.py", line 105, in callback
+    self.emit("error", exc)
+  File "/home/zt01/unitree_zt01/venv/lib/python3.11/site-packages/pyee/asyncio.py", line 70, in emit
+    return super().emit(event, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zt01/unitree_zt01/venv/lib/python3.11/site-packages/pyee/base.py", line 223, in emit
+    self._emit_handle_potential_error(event, args[0] if args else None)
+  File "/home/zt01/unitree_zt01/venv/lib/python3.11/site-packages/pyee/base.py", line 181, in _emit_handle_potential_error
+    raise error
+  File "/home/zt01/unitree_zt01/go2_webrtc_connect/go2_webrtc_driver/webrtc_driver.py", line 162, in on_track
+    frame = await track.recv()
+            ^^^^^^^^^^^^^^^^^^
+  File "/home/zt01/unitree_zt01/venv/lib/python3.11/site-packages/aiortc/rtcrtpreceiver.py", line 206, in recv
+    raise MediaStreamError
+aiortc.mediastreams.MediaStreamError
+INFO:root:Data channel closed

@@ -10,7 +10,7 @@ from go2_webrtc_driver.webrtc_driver import Go2WebRTCConnection, WebRTCConnectio
 from aiortc import MediaStreamTrack
 
 # === CONFIGURACIÓN ===
-IP_UNITREE = "192.168.1.25"  # Cambia esto por la IP de tu robot
+IP_UNITREE = "192.168.4.15"  # Cambia esto por la IP de tu robot
 PORT = 5001
 
 # === LOGGING ===

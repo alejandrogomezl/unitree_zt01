@@ -1,0 +1,26 @@
+error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+INFO:root:Creating offer...
+INFO:root:Trying to send SDP using the old method...
+ERROR:root:An error occurred: HTTPConnectionPool(host='192.168.4.15', port=8081): Max retries exceeded with url: /offer (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fff727f7fd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+ERROR:root:An error occurred with the old method: Failed to receive SDP Answer: No response
+INFO:root:Falling back to the new method...
+INFO:root:SDP successfully sent using the new method.
+INFO:aioice.ice:Connection(1) Discovered peer reflexive candidate Candidate(YaXVTqdKEN 1 udp 2130706431 192.168.4.15 53956 typ prflx)
+INFO:aioice.ice:Connection(1) Check CandidatePair(('192.168.1.162', 37296) -> ('192.168.4.15', 53956)) State.WAITING -> State.IN_PROGRESS
+INFO:aioice.ice:Connection(1) Check CandidatePair(('192.168.4.1', 56063) -> ('192.168.4.15', 53956)) State.WAITING -> State.IN_PROGRESS
+INFO:root:Track recieved: audio
+INFO:root:Track recieved: video
+INFO:aioice.ice:Connection(1) Check CandidatePair(('192.168.1.162', 37296) -> ('192.168.4.15', 53956)) State.FROZEN -> State.IN_PROGRESS
+INFO:aioice.ice:Connection(1) Check CandidatePair(('192.168.4.1', 56063) -> ('192.168.4.15', 53956)) State.FROZEN -> State.IN_PROGRESS
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.2)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+🎮 Mando detectado: Xbox Series X Controller
+🕒 WebRTC connection        : 🟡 started       (20:41:11)
+Decoder set to: LibVoxelDecoder
+🕒 Signaling State          : 🟡 have-local-offer (20:41:11)
+🕒 ICE Gathering State      : 🟡 gathering     (20:41:11)
+🕒 ICE Gathering State      : 🟢 complete      (20:41:11)
+🕒 ICE Connection State     : 🔵 checking      (20:41:11)
+🕒 Peer Connection State    : 🔵 connecting    (20:41:11)
+🕒 Signaling State          : 🟢 stable        (20:41:11)
+Data channel did not open in time

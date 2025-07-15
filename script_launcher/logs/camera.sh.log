@@ -1,0 +1,20 @@
+🕒 WebRTC connection        : 🟡 started       (20:41:32)
+ * Serving Flask app 'camera'
+ * Debug mode: off
+Address already in use
+Port 5001 is in use by another program. Either identify and stop that program, or start the server with a different port.
+Exception in thread Thread-1 (run_asyncio_loop):
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/threading.py", line 1038, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.11/threading.py", line 975, in run
+   INFO:werkzeug:192.168.4.14 - - [25/Jun/2025 20:41:34] "GET / HTTP/1.1" 200 -
+mera.py", line 43, in run_asyncio_loop
+    loop.run_until_complete(setup())
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 651, in run_until_complete
+    raise RuntimeError('Event loop stopped before Future completed.')
+RuntimeError: Event loop stopped before Future completed.
+Decoder set to: LibVoxelDecoder
+🕒 Signaling State          : 🟡 have-local-offer (20:41:32)
+sys:1: RuntimeWarning: coroutine 'Go2WebRTCConnection.init_webrtc.<locals>.on_ice_gathering_state_change' was never awaited
+sys:1: RuntimeWarning: coroutine 'Connection.get_component_candidates' was never awaited
