@@ -16,7 +16,12 @@ def get_current_script():
     if os.path.exists(STATUS_FILE):
         with open(STATUS_FILE, "r") as f:
             data = json.load(f)
-            return data.get("script")
+            script_name = data.get("script")
+            # Si el proceso ya no existe, borra el archivo
+            if not is_running(script_name):
+                clear_current_script()
+                return None
+            return script_name
     return None
 
 def clear_current_script():
