@@ -3,25 +3,49 @@
 <head>
     <title>Script Launcher</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        pre { background: #f0f0f0; padding: 10px; border: 1px solid #ccc; max-height: 300px; overflow-y: auto; }
-        .disabled { color: #888; pointer-events: none; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        pre {
+            background: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+        .disabled {
+            color: gray;
+            pointer-events: none;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-    <h1>Script Launcher</h1>
-    <h2>Scripts disponibles</h2>
+    <h1>Scripts disponibles</h1>
     <ul>
         {% for script in scripts %}
         <li>
-            {% if active_script == script %}
-                <strong>{{ script }} (En ejecución - PID {{ pid }})</strong> |
-                <a href="{{ url_for('stop_script_route') }}">Detener</a>
+            {{ script }} —
+            {% if status[script].running %}
+                <strong>En ejecución (PID {{ status[script].pid }})</strong> |
+                <a href="{{ url_for('stop_script_route', script=script) }}">Detener</a>
             {% else %}
-                {% if active_script %}
-                    <span class="disabled">{{ script }} (Bloqueado)</span>
+                {% if current_script %}
+                    <span class="disabled">Ejecutar</span>
                 {% else %}
-                    <a href="{{ url_for('run_script', script=script) }}">Ejecutar {{ script }}</a>
+                    <a href="{{ url_for('run_script', script=script) }}">Ejecutar</a>
                 {% endif %}
             {% endif %}
         </li>
@@ -29,12 +53,13 @@
     </ul>
 
     <hr>
+
     <h2>Salida por consola</h2>
-    {% if active_script %}
-        <h3>{{ active_script }}</h3>
-        <pre>{{ logs }}</pre>
+    {% if current_script %}
+        <h3>{{ current_script }}</h3>
+        <pre>{{ log_output }}</pre>
     {% else %}
-        <p>No hay ningún script en ejecución.</p>
+        <p>No hay script en ejecución.</p>
     {% endif %}
 </body>
 </html>
