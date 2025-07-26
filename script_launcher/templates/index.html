@@ -3,52 +3,38 @@
 <head>
     <title>Script Launcher</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        pre {
-            background: #f0f0f0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            max-height: 300px;
-            overflow-y: auto;
-            white-space: pre-wrap;
-        }
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        pre { background: #f0f0f0; padding: 10px; border: 1px solid #ccc; max-height: 300px; overflow-y: auto; }
+        .disabled { color: #888; pointer-events: none; }
     </style>
 </head>
 <body>
-    <h1>Scripts disponibles</h1>
+    <h1>Script Launcher</h1>
+    <h2>Scripts disponibles</h2>
     <ul>
         {% for script in scripts %}
         <li>
-            {{ script }} —
-            {% if status[script].running %}
-                <strong>En ejecución (PID {{ status[script].pid }})</strong> |
-                <a href="{{ url_for('stop_script_route', script=script) }}">Detener</a>
+            {% if active_script == script %}
+                <strong>{{ script }} (En ejecución - PID {{ pid }})</strong> |
+                <a href="{{ url_for('stop_script_route') }}">Detener</a>
             {% else %}
-                <a href="{{ url_for('run_script', script=script) }}">Ejecutar</a>
+                {% if active_script %}
+                    <span class="disabled">{{ script }} (Bloqueado)</span>
+                {% else %}
+                    <a href="{{ url_for('run_script', script=script) }}">Ejecutar {{ script }}</a>
+                {% endif %}
             {% endif %}
         </li>
         {% endfor %}
     </ul>
 
     <hr>
-
     <h2>Salida por consola</h2>
-    {% for script in scripts %}
-        <h3>{{ script }}</h3>
-        <pre>{{ logs[script] }}</pre>
-    {% endfor %}
+    {% if active_script %}
+        <h3>{{ active_script }}</h3>
+        <pre>{{ logs }}</pre>
+    {% else %}
+        <p>No hay ningún script en ejecución.</p>
+    {% endif %}
 </body>
 </html>
