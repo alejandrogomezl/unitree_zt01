@@ -39,7 +39,7 @@ async def main():
    joystick.init()
    print(f"🎮 Mando detectado: {joystick.get_name()}")
 
-   conn = Go2WebRTCConnection(WebRTCConnectionMethod.LocalSTA, ip="192.168.166.9")
+   conn = Go2WebRTCConnection(WebRTCConnectionMethod.LocalSTA, ip="192.168.12.52")
    await conn.connect()
    print("✅ Conectado al robot")
 
